@@ -1,0 +1,65 @@
+.container {
+  width: 22%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+  cursor: pointer;
+}
+
+.container:hover {
+  background-color: #dddddd;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2a2828;
+  text-align: center;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+}
+
+.desc {
+  text-align: center;
+  color: #777;
+}
+
+/* responsiveness */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .price,
+  .desc {
+    font-size: 24px;
+  }
+}
+
+/* iPads and tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    width: 50%;
+  }
+  .title {
+    font-size: 20px;
+  }
+}
+
+/* small screen laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 33%;
+  }
+}

@@ -1,0 +1,199 @@
+.container {
+  height: calc(100vh - 100px);
+  display: flex;
+  background-color: #fff;
+  text-align: left;
+}
+
+.left {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right {
+  flex: 1;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.imgContainer {
+  position: relative;
+  width: 80%;
+  height: 80%;
+}
+
+.price {
+  color: #571919;
+  font-size: 24px;
+  font-weight: 400;
+  border-bottom: 1px solid #0e0e0e;
+
+  width: fit-content;
+}
+
+.sizes {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.size {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.size:nth-child(2) {
+  width: 40px;
+  height: 40px;
+}
+
+.size:last-child {
+  width: 50px;
+  height: 50px;
+}
+
+.title {
+  margin-top: 20px;
+}
+
+.number {
+  position: absolute;
+  top: -5px;
+  right: -20px;
+  background-color: rgb(78, 65, 65);
+  color: white;
+  border-radius: 10px;
+  padding: 0 5px;
+  font-size: 12px;
+}
+
+.checkbox {
+  margin-right: 3px;
+  accent-color: #42160b;
+  width: 20px;
+  height: 20px;
+}
+
+.ingredients {
+  display: flex;
+  margin-bottom: 30px;
+  gap: 9px;
+  font-weight: 500;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+}
+
+.quantity {
+  width: 50px;
+  height: 30px;
+  font-size: 15px;
+  text-align: center;
+  border: 1px solid #433e3d;
+}
+
+.button {
+  height: 30px;
+  margin-left: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+/* responsiveness */
+
+/* mobile, iPads and tablets */
+@media screen and (max-width: 768px) {
+  .container {
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .imgContainer {
+    width: 70vw;
+    height: 70vw;
+  }
+
+  .right {
+    align-items: center;
+  }
+
+  .title {
+    margin: 5px;
+  }
+
+  .sizes {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .ingredients {
+    flex-direction: column;
+    align-self: start;
+  }
+
+  .option {
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .checkbox {
+    height: 25px;
+    width: 25px;
+  }
+
+  .quantity {
+    height: 50px;
+    width: 60px;
+  }
+  .button {
+    height: 50px;
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+}
+
+/* iPads and Tablets */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .imgContainer {
+    width: 50vw;
+    height: 50vw;
+  }
+
+  .sizes {
+    width: 50%;
+    padding: 0 20px;
+  }
+}
+
+/* small screen laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    height: auto;
+    margin: 30px 0;
+  }
+
+  .imgContainer {
+    width: 40vw;
+    height: 40vw;
+  }
+
+  .sizes {
+    width: 50%;
+  }
+}

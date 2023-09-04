@@ -1,0 +1,182 @@
+.container {
+  background-color: #fff;
+  padding: 50px;
+  display: flex;
+}
+
+.left {
+  flex: 2;
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.row:last-child {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inProgress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: inProgress 1s ease infinite alternate;
+}
+
+@keyframes inProgress {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.undone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.3;
+}
+
+.undone .checkedIcon,
+.inProgress .checkedIcon {
+  display: none;
+}
+
+.right {
+  flex: 1;
+}
+
+.wrapper {
+  width: 90%;
+  max-height: 300px;
+  background-color: #333;
+  color: #fff;
+  padding: 50px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  padding-bottom: 20px;
+}
+
+.totalTextTitle {
+  margin-right: 10px;
+}
+
+.button {
+  background-color: white;
+  height: 30px;
+  color: teal;
+  font-weight: bold;
+  margin-top: 20px;
+  border: none;
+  cursor: not-allowed;
+}
+
+/* responsiveness */
+
+/* mobile, iPad and tablet */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .trTitle {
+    display: none;
+  }
+
+  .tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .id::before {
+    content: "Order ID: ";
+    font-weight: 500;
+  }
+  .name::before {
+    content: "Customer: ";
+    font-weight: 500;
+  }
+  .address::before {
+    content: "Address: ";
+    font-weight: 500;
+  }
+  .total::before {
+    content: "Total: ";
+    font-weight: 500;
+  }
+
+  .row:last-child {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .done,
+  .inProgress,
+  .undone {
+    margin-bottom: 20px;
+  }
+
+  .wrapper {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/* iPad and tablet */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wrapper {
+    width: 70%;
+  }
+}
+
+/* small screen laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .row:last-child {
+    margin: 10%;
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wrapper {
+    width: 60%;
+  }
+}
